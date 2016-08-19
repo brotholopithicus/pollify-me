@@ -1,0 +1,37 @@
+<div class="container">
+		<h1>Create New Poll</h1>
+		<hr />
+	<form role="form" ng-submit="createPoll()">
+		<div class="form-group">
+			<label for="pollQuestion">Question</label>
+			<input type="text" ng-model="poll.question" class="form-control" id="pollQuestion" placeholder="Enter poll question">
+		</div>
+
+		<div class="form-group">
+			<label>Choices</label>
+			<div ng-repeat="choice in poll.choices">
+				<input type="text" ng-model="choice.text" class="form-control" placeholder="Enter choice {{$index+1}} text">
+				<br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<button type="button" class="btn btn-default" ng-click="addChoice()"><span class="fa fa-plus"></span> Add another</button>
+			</div>
+		</div>
+
+		<p>
+			<hr>
+		</p>
+
+		<div class="row">
+			<div class="col-xs-6">
+				<a ui-sref="polls" class="btn btn-danger button-width" role="button"><span class="fa fa-arrow-left"></span> Back to Poll List</a>
+			</div>
+			<div class="col-xs-6">
+				<button class="btn btn-primary button-width pull-right" type="submit">Create Poll <span class="fa fa-arrow-right" </button>
+		</div>
+	</div>
+</form>
+</div>

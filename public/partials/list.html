@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Open Polls</h1>
+    <hr />
+    <div class="row">
+        <div class="col-xs-6">
+            <a class="btn btn-danger" ui-sref="new">
+              Create New Poll
+              &nbsp
+              <span class="fa fa-plus"></span></a>
+        </div>
+        <div class="col-xs-6">
+            <input type="text" class="form-control" ng-model="query" placeholder="Search for a poll">
+        </div>
+    </div>
+    <hr />
+    <div ng-switch on="polls.length">
+        <div class="row" id="no-polls" ng-switch-when="0">
+            <div class="col-xs-12">
+                No polls in database. Would you like to <em><a ui-sref="new">create one</a>?</em>
+            </div>
+        </div>
+        <div class="row" id="list-item" ng-switch-default ng-repeat="poll in polls" ui-sref="pollItem({pollId: poll._id})">
+            <div class="col-xs-4">
+                <a ui-sref="pollItem({pollId: poll._id})"> <em>{{poll.question}}</em></a>
+            </div>
+            <div class="col-xs-4 col-xs-offset-4">
+                <a class="button" ui-sref="pollItem({pollId: poll._id})">Vote!</a>
+            </div>
+        </div>
+    </div>
+</div>

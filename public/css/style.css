@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC|Audiowide|Cabin|Dosis|Indie+Flower|Lato|Montserrat|Oswald|Permanent+Marker|Playball|Poiret+One|Roboto|Sigmar+One|Source+Sans+Pro|Yellowtail';
+body {
+    padding: 0 2em 2em 2em;
+    font-family: "Lato", sans-serif;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+h1 {
+    font-family: "Cabin";
+}
+.tab-content .lead {
+    margin-top: 20px;
+}
+.result-table {
+    margin: 20px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+.result-table td {
+    padding: 8px;
+}
+.result-table> tbody> tr> td:first-child {
+    width: 25%;
+    max-width: 300px;
+    text-align: right;
+}
+#list-row {
+    padding: 10px;
+    margin-bottom: 1em;
+    font-size: 20px;
+}
+#list-row:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.vote-button {
+  margin: 0 auto;
+    min-width: 100px;
+}
+.vote-button:hover {
+    background-color: rgba(203, 119, 119, 0.5);
+    border-color: rgba(203, 119, 119, 0.5);
+}
+.question-text {
+    text-decoration: none;
+}
+.question-text:hover {
+    text-decoration: none;
+    color: rgba(203, 119, 119, 0.5);
+}

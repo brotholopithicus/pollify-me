@@ -1,0 +1,61 @@
+<div class="container">
+<h1>{{poll.question}}</h1>
+	<hr>
+	<div ng-hide="poll.userVoted">
+	    <p class="lead">Select one of the following options to cast your vote.</p>
+
+	    <form role="form" ng-submit="vote()">
+	        <div ng-repeat="choice in poll.choices" class="radio">
+	            <label>
+	                <input type="radio" name="choice" ng-model="poll.userVote" value="{{choice._id}}">
+	                {{choice.text}}
+	            </label>
+	        </div>
+	        <p><hr></p>
+	        <div class="row">
+	            <div class="col-xs-6">
+	                <a ui-sref="polls" class="btn btn-danger button-width" role="button">
+	                    <span class="fa fa-times"></span>
+	                    &nbsp
+											Back to Poll List</a>
+	            </div>
+	            <div class="col-xs-6">
+	                <button class="btn btn-primary button-width pull-right" type="submit">Vote &nbsp<span class="fa fa-arrow-right"></span></button>
+	            </div>
+	        </div>
+	    </form>
+	</div>
+
+	<div ng-show="poll.userVoted">
+	    <table class="result-table">
+	        <tr ng-repeat="choice in poll.choices">
+	            <td>{{choice.text}}</td>
+	            <td>
+	                <table style="background-color: lightblue; width: {{choice.votes.length/poll.totalVotes*100}}%; text-align: right">
+	                    <tr>
+	                        <td>{{choice.votes.length}}</td>
+	                    </tr>
+	                </table>
+	            </td>
+	        </tr>
+	    </table>
+
+	    <p>
+	        <em>
+	            {{poll.totalVotes}}
+	            votes counted so far.
+	            <span ng-show="poll.userChoice">You voted for
+	                <strong>{{poll.userChoice.text}}</strong>.</span>
+	        </em>
+	    </p>
+
+	    <p><hr></p>
+
+
+	        <a ui-sref="polls" class="btn btn-warning" role="button">
+	            <span class="fa fa-arrow-left"></span>
+	            Back to Poll List</a>
+	</div>
+
+	<p>&nbsp;</p>
+</div>

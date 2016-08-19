@@ -1,0 +1,90 @@
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC|Audiowide|Cabin|Dosis|Indie+Flower|Lato|Montserrat|Oswald|Permanent+Marker|Playball|Poiret+One|Roboto|Sigmar+One|Source+Sans+Pro|Yellowtail';
+body {
+    background: url('https://hd.unsplash.com/photo-1457365050282-c53d772ef8b2') no-repeat center;
+    color: #000;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+h1 {
+    padding-top: 1rem;
+    font-family: "Oswald", "Helvetica", sans-serif;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 900px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 0 2rem 3rem 2rem;
+    border-radius: 10px;
+}
+#no-polls {
+    padding: 2rem;
+    font-size: 20px;
+    margin: 0 auto;
+}
+#list-item {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+#list-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.button {
+    font-size: 14px;
+    color: #fff;
+    padding: 1rem 2rem 1rem 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgba(91, 151, 195, 1);
+}
+.button:hover {
+      color: #fff;
+    text-decoration: none;
+    background-color: rgba(48, 99, 136, 0.8);
+}
+.button-width {
+    width: 200px;
+}
+
+/*body {
+    padding: 0 2em 2em 2em;
+    font-family: "Lato", sans-serif;
+}
+h1 {
+    font-family: "Cabin";
+}
+#list-row {
+    display: flex;
+    padding: 2rem;
+    font-size: 20px;
+    margin: 0 auto;
+}
+#list-row:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+#column-1, #column-2 {
+  margin: 0 auto;
+}
+
+.question-link {
+  text-decoration: none;
+}
+.question-link:hover {
+  text-decoration: none;
+}
+.question-number {
+text-align: center;
+font: 24px;
+}
+ */
